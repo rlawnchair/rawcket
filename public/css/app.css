@@ -1,0 +1,48 @@
+body{
+	padding-top: 120px; 
+}
+.navbar{
+	padding: 15px 0;
+	background-color:#fff;
+	transition:padding 0.3s;
+}
+.scrolled{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	-moz-box-shadow: 0px 5px 5px 0px #656565;
+	-webkit-box-shadow: 0px 5px 5px 0px #656565;
+	-o-box-shadow: 0px 5px 5px 0px #656565;
+	box-shadow: 0px 5px 5px 0px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=180, Strength=5);
+	background-color: rgba(255,255,255,0.9);
+}
+
+#mynavbar{
+	overflow-x: hidden;
+}
+
+#mynavbar ul li:last-child a{
+	padding-right: 0;
+}
+
+#mynavbar ul li a{
+	color: #E74C3C;
+}
+
+.menustyle{
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.headpicture{
+	background:url(http://demo.tutorialzine.com/2014/04/creative-company-bootstrap-template/assets/images/header.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	width: 100%;
+	height: 600px;
+}
+
+.test{
+	background-color: #34495E;
+}

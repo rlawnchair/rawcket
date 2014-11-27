@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "2.*"
+    },
+    "autoload": {
+		"classmap" : [
+			"app/controller",
+			"app/model",
+			"app/views"
+		],
+		"psr-4" : {
+			"Rawcket\\" : "rawcket/"
+		}
+	}
+}
