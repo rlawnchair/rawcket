@@ -23,4 +23,8 @@ class Session {
 	public function read($key = null){
 		return $key?(array_key_exists($key, $_SESSION)?$_SESSION[$key]:false):$_SESSION;
 	}
+
+	public function isLogged(){
+		return false;
+	}
 }

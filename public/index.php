@@ -14,16 +14,15 @@ $app->form = function(){
 	return new \Rawcket\Html\Form();
 };
 $app->session = new \Rawcket\Session();
-
+$app->auth = new \Rawcket\Auth();
 
 // Middleware
 $app->add(new \Rawcket\Auth\AuthMiddleware());
 
-
 // Routes -- Global
 $route = new \Rawcket\Routing\Route($app);
 $route->get('/', 'Pages@index')->name('root');
-$route->get('/test', 'Pages@test')->name('test');
+$route->get('/test', 'Pages@test', 'admin')->name('test');
 $route->post('/test', 'Pages@postTest')->name('postTest');
 
 // Route -- Login

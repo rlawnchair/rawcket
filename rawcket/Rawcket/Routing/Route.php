@@ -10,7 +10,8 @@ class Route {
 		$this->app = $app;
 	}
 
-	private function call($type, $url, $method){
+	private function call($type, $url, $method, $role){
+		$this->app->auth->setRole($url, $role);
 		return $this->app->$type($url, function () use($method){
 			$method = explode('@', $method);
 			$controller_name = $method[0] . 'Controller';
@@ -19,11 +20,11 @@ class Route {
 		});
 	}
 
-	public function get($url, $method){
-		return $this->call('get', $url, $method);
+	public function get($url, $method, $role = null){
+		return $this->call('get', $url, $method, $role);
 	}
 
-	public function post($url, $method){
-		return $this->call('post', $url, $method);
+	public function post($url, $method, $role = null){
+		return $this->call('post', $url, $method, $role);
 	}
 }
